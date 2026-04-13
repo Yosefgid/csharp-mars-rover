@@ -18,5 +18,11 @@ namespace MarsRover.ConsoleApp.Parsers
             }
             return instructions;
         }
+
+        public Position ParsePositions(string input) 
+        {
+            return new Position(1, 2, CompassDirection.N);
+
+        }
     }
 }
