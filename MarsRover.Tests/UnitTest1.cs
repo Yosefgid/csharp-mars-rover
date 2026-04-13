@@ -1,16 +1,26 @@
+using MarsRover.ConsoleApp;
+
 namespace MarsRover.Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void ParseInstruction_ReturnsCorrectInstruction_ForTheRightInput()
         {
-            Assert.Pass();
+            //Arrange
+            var parser = new InputParser();
+            var input = "LRM";
+
+            //Act
+            var result = parser.ParseInstructions(input);
+
+            //Assert
+            Assert.That(result, Is.EqualTo(new List<Instruction>
+            {
+                Instruction.L,
+                Instruction.R,
+                Instruction.M
+            }));
         }
     }
 }

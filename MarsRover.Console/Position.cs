@@ -10,3 +10,4 @@ namespace MarsRover.ConsoleApp
     //no behaviour in a data class
     public record Position(int X, int Y, CompassDirection Facing);
 }
+ 
