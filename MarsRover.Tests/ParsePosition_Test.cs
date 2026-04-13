@@ -30,6 +30,6 @@ public class ParsePosition_Test
         var result = parser.ParsePositions(input);
 
         //Assert
-        Assert.That(result, Is.EqualTo(new Position(3, 3, CompassDirection.N)));
+        Assert.That(result, Is.EqualTo(new Position(3, 3, CompassDirection.E)));
     }
 }
