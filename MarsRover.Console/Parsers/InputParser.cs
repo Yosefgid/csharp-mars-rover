@@ -21,6 +21,10 @@ namespace MarsRover.ConsoleApp.Parsers
 
         public Position ParsePositions(string input) 
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                throw new ArgumentException("Input can not be empty");
+            }
 
             var positions = input.Split(' ');
             int x = int.Parse(positions[0]);
