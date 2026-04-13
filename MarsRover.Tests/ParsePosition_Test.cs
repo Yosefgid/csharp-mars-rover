@@ -32,4 +32,21 @@ public class ParsePosition_Test
         //Assert
         Assert.That(result, Is.EqualTo(new Position(3, 3, CompassDirection.E)));
     }
+    [Test]
+    public void ParsePosition_ThrowsException_ForInvalidDirection()
+    {
+        var parser = new InputParser();
+        var input = "3 3 Y";
+        Assert.Throws<ArgumentException>(() => parser.ParsePositions(input));
+
+    }
+    [Test]
+    public void ParsePosition_ThrowsException_ForEmptyString()
+    {
+        var parser = new InputParser();
+        var input = "";
+        Assert.Throws<ArgumentException>(() => parser.ParsePositions(input));
+
+    }
+
 }
