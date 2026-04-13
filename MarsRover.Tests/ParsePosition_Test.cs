@@ -19,4 +19,17 @@ public class ParsePosition_Test
         //Assert
         Assert.That(result, Is.EqualTo(new Position(1, 2, CompassDirection.N)));
     }
+    [Test] 
+    public void ParsePosition_ReturnsCorrectPosition_ForDifferntValidInputs()
+    {
+        //Arrange
+        var parser = new InputParser();
+        var input = "3 3 E";
+
+        //Act
+        var result = parser.ParsePositions(input);
+
+        //Assert
+        Assert.That(result, Is.EqualTo(new Position(3, 3, CompassDirection.N)));
+    }
 }

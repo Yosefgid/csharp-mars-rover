@@ -22,6 +22,12 @@ namespace MarsRover.ConsoleApp.Parsers
         public Position ParsePositions(string input) 
         {
             return new Position(1, 2, CompassDirection.N);
+            //var positions = input.Split(' ');
+            //int x = int.Parse(positions[0]);
+            //int y = int.Parse(positions[1]);
+            //CompassDirection facing = Enum.Parse<CompassDirection>(positions[2]);
+            //return new pos
+           
 
         }
     }
