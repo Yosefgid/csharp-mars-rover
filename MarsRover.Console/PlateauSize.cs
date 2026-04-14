@@ -8,12 +8,5 @@ namespace MarsRover.ConsoleApp
 {
 
     //Plateau imagines as a rectangle with Width = x and Height = y
-    public class PlateauSize
-    {
-        public int Width { get; set; }
-        public int Height { get; set; }
-
-      
-
-    }
+    public record PlateauSize (int Width, int Height);
 }
