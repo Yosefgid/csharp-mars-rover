@@ -16,7 +16,7 @@ public class NUnitTestItem2
         var result = parser.ParsePlateauSize(input);
 
         //Assert
-        Assert.That(result, Is.EqualTo(new PlateauSize { Width = 5, Height = 5 }));
+        Assert.That(result, Is.EqualTo(new PlateauSize(5, 5)));
 
     }
 }

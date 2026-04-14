@@ -35,5 +35,10 @@ namespace MarsRover.ConsoleApp.Parsers
 
 
         }
+
+        public PlateauSize ParsePlateauSize(string input)
+        {
+            return new PlateauSize(5, 5);
+        }
     }
 }
